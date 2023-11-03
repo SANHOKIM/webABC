@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery문법 간단하게 해보자</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+
+    <script>
+        // 속성키는 쌍따옴표가 필요합니다 <= 어떤 확장프로그램 깔아야 이렇게 가이드 해주나요? 
+        $(document).ready(function () {
+            // json format을 쓸건데 json에선 항상 쌍따옴표 쓰기! 
+            $("body").css({ "backgroundColor": "red", "color": "white" })
+            // $("body").html("<h1>제이쿼리</h1>")  버튼수업때문에 숨김
+            $("body").append("<h1>제이쿼리</h1>")
+            $("h1").html("다시 지우고 드려요")
+            $("h1").append("<span> 이어서 들어갈 수 이 있다.</span>")
+            $("h1").prepend("<span>h1 태그 안에서 제일 앞으로</span>")
+
+            // $("h1").hide("")
+
+            // $("body").html("")
+
+            var textinfo = $("h1").html();
+
+            var flag = true;
+
+
+            $("button").click(function () {
+                // $("body").html("") h1남기기할려고 숨김
+
+                // $("button").animate({ "marginLeft": 100 })
+                $("button").animate({ "marginLeft": "+=100" }, 1000)
+
+
+                if (flag) {
+                    $(this).html("삭제됨")
+                    $("h1").html("")
+                    flag = false;
+                } else {
+                    $(this).html("다른 상황")
+                    $("h1").html(textinfo)
+                    flag = true;
+                }
+            })
+        })
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <button>삭제</button>
+</body>
+
+</html>

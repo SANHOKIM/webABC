@@ -9,7 +9,7 @@ li {
 }
 
 a:hover {
-    color: red;
+    color: green;
 }
 
 .bg-check {
@@ -62,6 +62,58 @@ a:hover {
 }
 
 #threeBanner>* {
-    /* width: 33.333%; */
-    flex-grow: 1;
+    width: 33.333%;
+    /* flex-grow: 1; */
+}
+
+a {
+    text-decoration: none;
+}
+
+#hd {
+    background-color: rgb(255, 255, 209);
+}
+
+#hd h1 {
+    margin-left: 3rem;
+}
+
+#gnb>li {
+    background-color: red;
+}
+
+#gnb>li>a {
+    /* font-size: 1.5rem; */
+    font-size: 20px;
+    /* a메뉴 넓게 받아줄 수 있게 넉넉하게 패딩 빼세요 ~! 20px하지말고 30px */
+    padding: 20px 30px;
+    display: block;
+}
+
+/* 소메뉴 */
+#gnb ul {
+    background-color: white;
+    /* background-color: transparent; */
+    /* 투명도를 주는 이유 대메뉴와 소메뉴간의 보더라인때문 */
+    border: 1px solid transparent;
+    left: 0;
+    right: 0%;
+    top: 100%;
+    text-indent: 2rem;
+    line-height: 2;
+    /* 어떤게 유전요소예요?? */
+    /* 소메뉴 갯수가 다 다르다면?  */
+    max-height: 0;
+    overflow: hidden;
+    /* transparent때문에 transition: max-height 0.5s; */
+    transition: max-height 0.5s;
+
+
+}
+
+
+#gnb>li:hover ul {
+    max-height: 180px;
+    border-color: #222;
+    background-color: #fff;
 }
