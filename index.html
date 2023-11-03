@@ -16,7 +16,7 @@
     <!-- 웹기능사 b형; 3형제, 컨테이너안에 2개 -->
 
     <div class="container">
-        <header id="hd" class="d-flex jcb aic">
+        <header id="hd" class="d-flex jcb aic h100">
             <!-- hd>a>img[src=./img/logo.png][alt=로고] -->
             <h1><a href=""><img src="./img/logopng-header.png" alt="로고"></a></h1>
             <!-- ul#gnb.d-flex>li*4>a{대메뉴}+ul.abs>li*5>a{소메뉴} -->
@@ -64,10 +64,44 @@
             </ul>
         </header>
 
-        <div id="swiper"></div>
-        <div id="threeBanner"></div>
-        <footer id="fd"></footer>
+        <div id="swiper" class="h300">
+            <!-- <div id="swiper" class="ofh"> -->
+            <!-- ?: #swiper에 ofn 할 때랑 아래 ofn 할 때 보기에 같은데 왜 위에다 두나요???? -->
+            <div class="swiper-wrapper d-flex ofh">
+                <div class="swiper-slide"><img src="./img/jwsc-emerald.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/jwsc-gray.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/jwsc-purple.jpg" alt=""></div>
+            </div>
+        </div>
+        <div id="threeBanner" class="d-flex h200">
+            <div class="tabs">
+                공지랑 갤러리
+            </div>
+            <!-- 오후 2시간 동안 처리할게요. -->
+            <div>
+                <a href=""><img src="" alt=""></a>
+            </div>
+            <div><a href=""><img src="" alt=""></a>
+            </div>
+        </div>
+
+        <footer id="fd" class="d-flex jcb h100">
+            <h2><a href=""><img src="./img/logopng-footer.png" alt=""></a></h2>
+            <div>
+
+                <ul class="d-flex">
+                    <li><a href="">하단메뉴</a></li>
+                    <li><a href="">하단메뉴</a></li>
+                    <li><a href="">하단메뉴</a></li>
+                    <li><a href="">하단메뉴</a></li>
+                </ul>
+                <p>COPYRIGHT 2023, </p>
+
+            </div>
+        </footer>
     </div>
+
+
 
 
 
